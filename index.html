@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html class="no-skrollr">
+<head>
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+	<title>中秋节</title>
+
+	<style type="text/css">
+	* {
+		padding:0;
+		margin:0;
+	}
+
+	html, body {
+		height:100%;
+	}
+
+	.skrollr-desktop body {
+		height:100% !important;
+	}
+
+	body {
+		font-family:sans-serif;
+	}
+
+	p {
+		margin:1em 0;
+	}
+
+	.parallax-image-wrapper {
+		position:fixed;
+		left:0;
+		width:100%;
+		overflow:hidden;
+	}
+
+	.parallax-image-wrapper-50 {
+		height:50%;
+		top:-50%;
+	}
+
+	.parallax-image-wrapper-100 {
+		height:100%;
+		top:-100%;
+	}
+
+	.parallax-image {
+		display:none;
+		position:absolute;
+		bottom:0;
+		left:0;
+		width:100%;
+		background-repeat:no-repeat;
+		background-position:center;
+		background-size:cover;
+	}
+
+	.parallax-image-50 {
+		height:200%;
+		top:-50%;
+	}
+
+	.parallax-image-100 {
+		height:100%;
+		top:0;
+	}
+
+	.parallax-image.skrollable-between {
+		display:block;
+	}
+
+	.no-skrollr .parallax-image-wrapper {
+		display:none !important;
+	}
+
+	#skrollr-body {
+		height:100%;
+		overflow:visible;
+		position:relative;
+	}
+
+	.gap {
+		background:transparent center no-repeat;
+		background-size:cover;
+	}
+
+	.skrollr .gap {
+		background:transparent !important;
+	}
+
+	.gap-50 {
+		height:50%;
+	}
+
+	.gap-100 {
+		height:100%;
+	}
+
+	.header, .content {
+		background:#fff;
+		padding:1em;
+
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		box-sizing:border-box;
+	}
+
+	.content-full {
+		height:100%;
+	}
+
+	#done {
+		height:100%;
+	}
+	</style>
+</head>
+
+<body>
+	<!--
+		We position the images fixed and therefore need to place them outside of #skrollr-body.
+		We will then use data-anchor-target to display the correct image matching the current section (.gap element).
+	-->
+
+	<div
+		class="parallax-image-wrapper parallax-image-wrapper-100"
+		data-anchor-target="#dragons + .gap"
+		data-bottom-top="transform:translate3d(0px, 200%, 0px)"
+		data-top-bottom="transform:translate3d(0px, 0%, 0px)">
+
+		<div
+			class="parallax-image parallax-image-100"
+			style="background-image:url(images/2.jpg)"
+			data-anchor-target="#dragons + .gap"
+			data-bottom-top="transform: translate3d(0px, -80%, 0px);"
+			data-top-bottom="transform: translate3d(0px, 80%, 0px);"
+		></div>
+		<!--the +/-80% translation can be adjusted to control the speed difference of the image-->
+	</div>
+
+	<div
+		class="parallax-image-wrapper parallax-image-wrapper-100"
+		data-anchor-target="#bacons + .gap"
+		data-bottom-top="transform:translate3d(0px, 200%, 0px)"
+		data-top-bottom="transform:translate3d(0px, 0%, 0px)">
+
+		<div
+			class="parallax-image parallax-image-100"
+			style="background-image:url(images/6.jpg)"
+			data-anchor-target="#bacons + .gap"
+			data-bottom-top="transform: translate3d(0px, -80%, 0px);"
+			data-top-bottom="transform: translate3d(0px, 80%, 0px);"
+		></div>
+	</div>
+
+	<div
+		class="parallax-image-wrapper parallax-image-wrapper-50"
+		data-anchor-target="#kittens + .gap"
+		data-bottom-top="transform:translate3d(0px, 300%, 0px)"
+		data-top-bottom="transform:translate3d(0px, 0%, 0px)">
+
+		<div
+			class="parallax-image parallax-image-50"
+			style="background-image:url(images/4.jpg)"
+			data-anchor-target="#kittens + .gap"
+			data-bottom-top="transform: translate3d(0px, -60%, 0px);"
+			data-top-bottom="transform: translate3d(0px, 60%, 0px);"
+		></div>
+	</div>
+
+  </div>
+	<div id="skrollr-body">
+		<div class="header" id="dragons">
+      <h1>中秋节</h1>
+      <h3>(Moon Festival)</h3>
+      <p>The Chinese Moon (Mid-Autumn) begins on the 15th day of the 8th lunar month, coinciding with the full moon phase. While no official date of creation exists,
+         the first mention of "Mid-Autumn" occured during the Zhou (周) dynasty, with the festival becoming popular during the Tang (唐) dynasty.
+       </p>
+		</div>
+
+		<div class="gap gap-100" style="background-image:url(images/kitteh1.jpg);"></div>
+		<div class="content" id="bacons">
+      <h2>Why?</h2>
+      <p>The Chinese orignally celebrated the moon festival to mark the end of harvest season.
+         After six long, grueling months of working the fields, peasants felt the need to reap
+         the benefits of their hard work and celebrate their fortunate situations.
+       </p>
+    </div>
+
+		<div class="gap gap-100" style="background-image:url(/images/1.jpg);"></div>
+		<div class="content" id="kittens">
+			<p>While methods of celebration vary, most typically follow practices laid down by previous generations. These include:</p>
+       <div style="float:right;"><img src="images/mooncake.gif" width="168" height="170"></img></div>
+       <h3><li>Romance</li>
+       <br>
+       <li>Lanterns</li>
+       <br>
+       <li>月饼</h3>(Mooncakes)<h3></li>
+       <br>
+       <li>Family</li>
+       <br>
+       <li>Cassia Wine</li></h3>
+		</div>
+		<div class="gap gap-50" style="background-image:url(/images/2.jpg);"></div>
+		<div class="content" id="done">
+			<p>Chinese folklore states the origins of the Moon Festival come from a fateful diety by the name of 嫦娥, or Chang'E, and her husband, Hou Yi.
+      Legend has it, Hou Yi had expert aim witha bow and arrow... Graceful enough that when a group of ten corrupt suns scorched the fields
+      of farmers, he shot all but one down, relieving the farmers from their burdern.</p>
+      <p>In exchange for his valiant act, 西王母, or Empress Wang Mu, gifted Hou Yi an elixar that, if consumed,
+         would immediately cause the individual to rise into heaven. Hou Yi thought about this proposition, but his thoughts
+         quickly turned to his beautiful wife, Chang'E. How could he possibly leave her alone on this realm? Realizing the
+         gravity of the situation, Hou Yi chose to postpone consuming the elixar, and instead entrusted it in the hands of
+         Chang'E.</p>
+      <p>An enemy of Hou Yi, by the name of Peng Meng, envied Hou Yi for his possesion of this potion. One day, while Hou Yi hunted with
+         friends, Peng Meng burst into the chambers of Chang'E, demanding she give him the elixar. Contemplating the consequences,
+         Chang'E made a rash decision: she consumed the elixar herself. Immediately, she became weightless, and fluttered out the nearest
+         widnow towards the celestial body and, eventually, the Moon Palace.</p>
+      <div style="float:right;"><img src="images/fullmoon.jpg" width="306" height="396"/></div>
+      <p>Hou Yi, upon returning home, felt decimated to learn the news. Turning towards the moon, he began to chase after it, but found that as
+         he advanced, it retreated, and as he retreated, it advanced. Broken, he set up an incense table in Chang'E's favorite garden and
+         began to pray for her safe return. As news spread, others began to partake in Hou Yi's ceremony. To this day, Chinese pray to the moon
+         for Chang'E's safety and good fortune every harvest season, hoping that their prayers might be heard and Hou Yi's legacy fulfilled.</p>
+
+		</div>
+	</div>
+
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.26/skrollr.min.js"></script>
+	<script type="text/javascript">
+	skrollr.init({
+		smoothScrolling: false,
+		mobileDeceleration: 0.004
+	});
+	</script>
+</body>
+
+</html>
